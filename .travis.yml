@@ -35,9 +35,7 @@ before_script:
 
 script:
   - ./gradlew check connectedCheck
-  - ./gradlew check connectedAndroidTest
-
 after_script:
   # Show tests and lint results
-  - cat ${TRAVIS_BUILD_DIR}/*/build/outputs/androidTest-results/connected/*
+  - cat ${TRAVIS_BUILD_DIR}/app/build/outputs/androidTest-results/connected/*
   - cat ${TRAVIS_BUILD_DIR}/app/build/reports/lint-results.xml
